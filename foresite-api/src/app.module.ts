@@ -26,7 +26,7 @@ import { PlanningModule } from './modules/planning/planning.module';
         // URL interna de Render: sin SSL. URL externa (desde tu PC): DB_SSL=true
         ssl: config.get<string>('DB_SSL') === 'true' ? { rejectUnauthorized: false } : false,
         autoLoadEntities: true,
-        schema: 'vintage',
+        schema: 'public',
         synchronize: config.get<string>('DB_SYNCHRONIZE') === 'true',
         retryAttempts: 3,
         retryDelay: 1000,
